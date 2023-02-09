@@ -101,10 +101,9 @@ passport.deserializeUser((user, done) => {
 // Mongoose connect
 //mongodb://root:123456@localhost:27017
 mongoose
-  .connect('mongodb://127.0.0.1/pet-shop', {
+  .connect('mongodb+srv://petshop:petshop@cluster0.nt4yuxe.mongodb.net/?retryWrites=true&w=majority', {
     useNewUrlParser: true,
-    useUnifiedTopology: true,
-    dbName: 'pet-shop'
+    useUnifiedTopology: true
   })
   .then(() => {
     console.log("DB Connected!");
